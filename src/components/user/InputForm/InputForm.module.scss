@@ -1,0 +1,19 @@
+.inputContentGroup {
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  > label {
+    font-weight: bold;
+  }
+
+  > input {
+    border-radius: 10px;
+    padding: 0.3rem 0.6rem;
+    margin-top: 0.3rem;
+  }
+}
+
+.errorMessage {
+  height: 1rem;
+}
