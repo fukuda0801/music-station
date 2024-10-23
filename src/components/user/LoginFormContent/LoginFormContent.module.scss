@@ -1,12 +1,12 @@
-@import "/src/app/styles/variables.scss";
+@import "/src//app//styles/variables.scss";
 
-.registerForm {
+.loginFormContent {
   background-color: $back-color;
   border-radius: 10px;
   padding: 1rem;
 }
 
-.buttonContent {
+.buttonGroup {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
