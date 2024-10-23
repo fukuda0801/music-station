@@ -1,9 +1,9 @@
 import Button from "@/components/utils/Button/Button";
+import Link from "next/link";
 import FormTitle from "../FormTitle/FormTitle";
 import InputForm from "../InputForm/InputForm";
-import styles from "./LoginFormContent.module.scss";
-import Link from "next/link";
 import NavigationLink from "../NavigationLink/NavigationLink";
+import styles from "./LoginFormContent.module.scss";
 
 const LoginFormContent = () => {
   return (
