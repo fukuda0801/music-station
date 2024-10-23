@@ -3,4 +3,5 @@ export interface ButtonProps {
   type: "button" | "reset" | "submit" | undefined;
   handleClick?: () => void;
   variant: "primary" | "secondary";
+  disabled?: boolean;
 }

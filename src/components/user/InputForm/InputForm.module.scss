@@ -9,6 +9,7 @@
 
   > input {
     border-radius: 10px;
+    border: none;
     padding: 0.3rem 0.6rem;
     margin-top: 0.3rem;
   }
@@ -16,4 +17,8 @@
 
 .errorMessage {
   height: 1rem;
+  font-size: 0.8rem;
+  color: rgb(255, 73, 73);
+  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
 }
