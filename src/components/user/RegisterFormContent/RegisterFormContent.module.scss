@@ -1,5 +1,7 @@
+@import "/src/app/styles/variables.scss";
+
 .registerForm {
-  background-color: rgb(52, 52, 52);
+  background-color: $back-color;
   border-radius: 10px;
   padding: 1rem;
 }
@@ -19,4 +21,10 @@
   button {
     margin-bottom: 1rem;
   }
+}
+
+.naviContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
