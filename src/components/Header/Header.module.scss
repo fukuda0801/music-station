@@ -1,0 +1,28 @@
+@import "/src//app//styles/variables.scss";
+
+.headerContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  height: 90px;
+  color: white;
+  border-bottom: 3px solid $secondary-color;
+  z-index: 9999;
+  width: 100%;
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > a > img {
+      width: auto;
+      max-height: 74px;
+    }
+
+    & > div {
+      font-weight: bold;
+    }
+  }
+}
