@@ -1,0 +1,21 @@
+@import "/src/app/styles/variables.scss";
+
+.top__content {
+  padding: 1rem 0.3rem;
+
+  &_unit {
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+    background-color: $back-color;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+  }
+}
