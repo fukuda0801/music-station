@@ -5,6 +5,7 @@ import SongGroupTitle from "@/components/top/SongGroupTitle/SongGroupTitle";
 import {
   getAlbumRanking,
   getArtistRanking,
+  getFavoriteAlbum,
   getSingleSongRanking,
 } from "@/utils/api";
 import styles from "./page.module.scss";
@@ -16,6 +17,8 @@ const TopPage = async () => {
   const albums = await getAlbumRanking(4);
   // アーティストランキング4件取得
   const artists = await getArtistRanking(4);
+  // 人気新着アルバム4件取得
+  const favoriteAlbums = await getFavoriteAlbum(4);
 
   return (
     <div className={styles.top__content}>
@@ -47,8 +50,8 @@ const TopPage = async () => {
         <div className={styles.top__content_title}>
           <SongGroupTitle title="人気新着" />
           <SongDetailLink link="/" />
-          {/* 人気新着 */}
         </div>
+        <SongGroup songs={favoriteAlbums} />
       </section>
 
       <section className={styles.top__content_unit}>
