@@ -64,10 +64,16 @@ const Hamburger = () => {
             <Link href="/">マイページ</Link>
           </li>
           <li>
-            <Link href="/">人気新着</Link>
+            <Link href="/ranking/single">シングルランキング</Link>
           </li>
           <li>
-            <Link href="/">シングルランキング</Link>
+            <Link href="/ranking/album">アルバムランキング</Link>
+          </li>
+          <li>
+            <Link href="/ranking/artist">アーティストランキング</Link>
+          </li>
+          <li>
+            <Link href="/">人気新着</Link>
           </li>
           <li>
             <Link href="/">ジャンル一覧</Link>
