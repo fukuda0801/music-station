@@ -54,6 +54,17 @@ export interface AlbumRanking extends Album {
   artist: Artist;
 }
 
+// 新着人気楽曲取得APIにて使用する型
+export interface FavoriteAlbum extends Album {
+  release_date: "2024-10-30";
+  artist: {
+    id: number;
+    name: string;
+    tracklist: string;
+    type: string;
+  };
+}
+
 export interface SingleSong extends Song {
   artist: Artist;
   album: Album;
