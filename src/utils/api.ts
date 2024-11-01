@@ -36,3 +36,15 @@ export const getArtistRanking = async (limit: number) => {
     handleError(error);
   }
 };
+
+// 新着人気アルバムを取得する関数(limit: 取得件数)
+export const getFavoriteAlbum = async (limit: number) => {
+  try {
+    const result = await axios.get(
+      `http://localhost:3000/api/music/get_favorite_album?limit=${limit}`,
+    );
+    return result.data.result;
+  } catch (error) {
+    handleError(error);
+  }
+};
