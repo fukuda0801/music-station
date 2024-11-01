@@ -41,8 +41,39 @@ export interface Album {
   type: string;
 }
 
+// アーティストランキング取得APIにて使用する型
+export interface ArtistRanking extends Artist {
+  position: number;
+}
+
+// アルバムランキング取得APIにて使用する型
+export interface AlbumRanking extends Album {
+  link: string;
+  radio: string;
+  position: string;
+  artist: Artist;
+}
+
+// 新着人気楽曲取得APIにて使用する型
+export interface FavoriteAlbum extends Album {
+  release_date: "2024-10-30";
+  artist: {
+    id: number;
+    name: string;
+    tracklist: string;
+    type: string;
+  };
+}
+
 export interface SingleSong extends Song {
   artist: Artist;
   album: Album;
   type: string;
+}
+
+// ArtistGroupPropsの型
+export interface ArtistGroupProps {
+  id: number;
+  name: string;
+  image: string;
 }

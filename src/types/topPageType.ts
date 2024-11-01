@@ -2,8 +2,8 @@
 export interface SongGroupProps {
   id: number;
   title: string;
-  duration: number;
-  preview: string;
+  duration?: number;
+  preview?: string;
   image: string;
   artist: {
     id: number;
