@@ -1,0 +1,17 @@
+@import "/src/app/styles/variables.scss";
+.content {
+  padding: 1rem 0.3rem;
+
+  &_unit {
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+    background-color: $back-color;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+      margin-bottom: 1rem;
+    }
+  }
+}

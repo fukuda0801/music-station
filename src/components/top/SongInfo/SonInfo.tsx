@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./SongInfo.module.scss";
 
-const SongInfo = ({ id, title, artist, image }: SongInfoProps) => {
+const SongInfo = ({ id, num, title, artist, image }: SongInfoProps) => {
   return (
     <Link href="/" className={styles.content}>
+      <p>Rank&nbsp;{num}</p>
       <Image
         src={image}
         alt={`${title}-${id}の画像`}

@@ -6,13 +6,16 @@ const ArtistInfo = ({
   id,
   name,
   image,
+  num,
 }: {
   id: number;
   name: string;
   image: string;
+  num: number;
 }) => {
   return (
     <Link href="/" className={styles.content}>
+      <p className={styles.content_item}>Rank&nbsp;{num}</p>
       <Image
         src={image}
         alt={`${image}-${id}の画像`}
@@ -20,7 +23,7 @@ const ArtistInfo = ({
         height={150}
         priority
       />
-      <p>{name}</p>
+      <p className={styles.content_item__name}>{name}</p>
     </Link>
   );
 };

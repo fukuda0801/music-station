@@ -9,6 +9,17 @@
     background-color: $hover-back-color;
   }
 
+  &_item {
+    text-align: start;
+    font-weight: bold;
+
+    &__name {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 0.3rem;
+    }
+  }
+
   & > img {
     border-radius: 50%;
     box-shadow: 0px 0px 10px -5px #ffffff;
@@ -18,11 +29,5 @@
     &:hover {
       opacity: 0.8;
     }
-  }
-
-  & > p {
-    margin-top: 0.3rem;
-    font-weight: bold;
-    text-align: center;
   }
 }
