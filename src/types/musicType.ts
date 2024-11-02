@@ -4,6 +4,7 @@ export interface SongDetailProps {
   title: string;
   artist: string;
   duration: number;
+  preview: string;
 }
 
 // ArtistLinkコンポーネントのprops
