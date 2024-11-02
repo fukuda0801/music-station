@@ -1,14 +1,21 @@
 import type { SongDetailProps } from "@/types/musicType";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
-import StopCircleIcon from "@mui/icons-material/StopCircle";
 import Image from "next/image";
+import PlayMusic from "../PlayMusic/PlayMusic";
 import styles from "./SongDetail.module.scss";
 
 // シングルが曲詳細コンポーネント
-const SongDetail = ({ image, title, artist, duration }: SongDetailProps) => {
+const SongDetail = ({
+  image,
+  title,
+  artist,
+  duration,
+  preview,
+}: SongDetailProps) => {
   const seconds = duration % 60;
   const minute = Math.floor(duration / 60);
+
+  console.log(preview);
 
   return (
     <section className={styles.description__song}>
@@ -26,8 +33,7 @@ const SongDetail = ({ image, title, artist, duration }: SongDetailProps) => {
           {minute}分{seconds}秒
         </p>
         <div>
-          <PlayCircleIcon />
-          <StopCircleIcon />
+          <PlayMusic preview={preview} />
         </div>
         <button type="button">
           <FavoriteBorderIcon />

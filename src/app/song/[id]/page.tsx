@@ -21,6 +21,7 @@ const SongPage = async ({ params }: MusicParams) => {
           title={songDetail.title}
           artist={songDetail.artist.name}
           duration={songDetail.duration}
+          preview={songDetail.preview}
         />
       </div>
 
