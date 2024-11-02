@@ -27,7 +27,7 @@ const TopPage = async () => {
           <SongGroupTitle title="シングルランキング" />
           <SongDetailLink link="/ranking/single" />
         </div>
-        <SongGroup songs={singleSongs} />
+        <SongGroup songs={singleSongs} link="song" />
       </section>
 
       <section className={styles.top__content_unit}>
@@ -35,7 +35,7 @@ const TopPage = async () => {
           <SongGroupTitle title="アルバムランキング" />
           <SongDetailLink link="/ranking/album" />
         </div>
-        <SongGroup songs={albums} />
+        <SongGroup songs={albums} link="album" />
       </section>
 
       <section className={styles.top__content_unit}>
@@ -51,7 +51,7 @@ const TopPage = async () => {
           <SongGroupTitle title="人気新着" />
           <SongDetailLink link="/" />
         </div>
-        <SongGroup songs={favoriteAlbums} />
+        <SongGroup songs={favoriteAlbums} link="album" />
       </section>
 
       <section className={styles.top__content_unit}>

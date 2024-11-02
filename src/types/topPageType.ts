@@ -14,6 +14,7 @@ export interface SongGroupProps {
 
 // SongInfoコンポーネントの型
 export interface SongInfoProps {
+  link: string;
   id: number;
   num: number;
   title: string;

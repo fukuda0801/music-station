@@ -1,0 +1,29 @@
+@import "/src/app/styles/variables.scss";
+
+.content__link_artist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $hover-back-color;
+  }
+
+  & > img {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px -5px #fff;
+  }
+
+  & > div {
+    width: 70%;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

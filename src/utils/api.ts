@@ -48,3 +48,29 @@ export const getFavoriteAlbum = async (limit: number) => {
     handleError(error);
   }
 };
+
+// 楽曲詳細を取得する関数
+// idには動的ルーティングのidを取得して使用してください。
+export const getSingleDetail = async (id: number) => {
+  try {
+    const result = await axios.get(
+      `http://localhost:3000/api/music/get_single_detail/${id}`,
+    );
+    return result.data.result;
+  } catch (error) {
+    handleError(error);
+  }
+};
+
+// アーティストの人気楽曲
+// artistにはartistのidを、limitに取得件数を使用してください。
+export const getArtistSongs = async (artist: number, limit: number) => {
+  try {
+    const result = await axios.get(
+      `http://localhost:3000/api/music/get_artist_songs?limit=${limit}&artist=${artist}`,
+    );
+    return result.data.result;
+  } catch (error) {
+    handleError(error);
+  }
+};
