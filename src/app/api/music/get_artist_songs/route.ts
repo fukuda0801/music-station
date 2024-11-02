@@ -1,5 +1,6 @@
+import type { ArtistSingles } from "@/types/deezerType";
 import axios from "axios";
-import { NextResponse, type NextRequest } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 const deezerUrl = process.env.DEEZER_URL;
 
@@ -10,7 +11,7 @@ export const GET = async (request: NextRequest) => {
     const limit = searchParams.get("limit");
 
     const songs = await axios.get(
-      `${deezerUrl}/artist/${artist}/top?limit=${limit}`
+      `${deezerUrl}/artist/${artist}/top?limit=${limit}`,
     );
 
     if (!songs) {
@@ -19,7 +20,7 @@ export const GET = async (request: NextRequest) => {
       });
     }
 
-    const result = songs.data.data.map((song: any) => {
+    const result = songs.data.data.map((song: ArtistSingles) => {
       return {
         id: song.id,
         title: song.title,
@@ -33,7 +34,7 @@ export const GET = async (request: NextRequest) => {
     console.error(error);
     return NextResponse.json(
       { message: "サーバーエラーが発生しました" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 };
