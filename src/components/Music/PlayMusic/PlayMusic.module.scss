@@ -1,0 +1,27 @@
+@import "/src/app/styles/variables.scss";
+
+.content__item {
+  & > * {
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  &_active {
+    color: $primary-color;
+    cursor: pointer;
+  }
+
+  &_inactive {
+    color: $secondary-color;
+  }
+
+  &_slider {
+    display: flex;
+    gap: 0.8rem;
+    margin: 0.3rem 0;
+
+    & > * {
+      color: $primary-color;
+    }
+  }
+}
