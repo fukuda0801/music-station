@@ -12,7 +12,7 @@ const singleRanking = async () => {
         <div>
           <SongGroupTitle title="シングルランキング" />
         </div>
-        <SongGroup songs={singles} />
+        <SongGroup songs={singles} link="song" />
       </div>
     </div>
   );

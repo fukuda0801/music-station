@@ -11,7 +11,7 @@ const AlbumPage = async () => {
         <div>
           <SongGroupTitle title="アルバムランキング" />
         </div>
-        <SongGroup songs={albums} />
+        <SongGroup songs={albums} link="album" />
       </div>
     </div>
   );
