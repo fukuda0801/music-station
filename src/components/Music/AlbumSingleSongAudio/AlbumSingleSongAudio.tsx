@@ -1,5 +1,6 @@
 "use client";
 
+import type { AlbumSingleSongAudioProps } from "@/types/musicType";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import StopCircleIcon from "@mui/icons-material/StopCircle";
 import { useEffect, useRef } from "react";
@@ -10,7 +11,7 @@ const AlbumSingleSongAudio = ({
   handlePlay,
   handlePause,
   isPlaying,
-}: any) => {
+}: AlbumSingleSongAudioProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // 再生状態に応じてオーディオを再生、停止

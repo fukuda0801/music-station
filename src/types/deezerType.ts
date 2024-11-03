@@ -86,7 +86,23 @@ export type MusicParams = {
   searchParams: ReadonlyURLSearchParams;
 };
 
-export interface ArtistSingles {
+export interface Contributors {
+  id: number;
+  name: string;
+  link: string;
+  share: string;
+  picture: string;
+  picture_small: string;
+  picture_medium: string;
+  picture_big: string;
+  picture_xl: string;
+  radio: boolean;
+  tracklist: string;
+  type: string;
+  role: string;
+}
+
+export interface AlbumSingles {
   id: number;
   readable: boolean;
   title: string;
@@ -99,21 +115,6 @@ export interface ArtistSingles {
   explicit_content_lyrics: number;
   explicit_content_cover: number;
   preview: string;
-  contributors: {
-    id: number;
-    name: string;
-    link: string;
-    share: string;
-    picture: string;
-    picture_small: string;
-    picture_medium: string;
-    picture_big: string;
-    picture_xl: string;
-    radio: boolean;
-    tracklist: string;
-    type: string;
-    role: string;
-  }[];
   md5_image: string;
   artist: {
     id: number;
@@ -134,4 +135,8 @@ export interface ArtistSingles {
     type: string;
   };
   type: string;
+}
+
+export interface ArtistSingles extends AlbumSingles {
+  contributors: Contributors[];
 }

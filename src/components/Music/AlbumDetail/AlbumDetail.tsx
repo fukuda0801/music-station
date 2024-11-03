@@ -1,6 +1,6 @@
+import type { AlbumDetailProps } from "@/types/musicType";
 import Image from "next/image";
 import styles from "./AlbumDetail.module.scss";
-import { AlbumDetailProps } from "@/types/musicType";
 
 // アルバム詳細を表示するコンポーネント
 const AlbumDetail = ({ album }: { album: AlbumDetailProps }) => {

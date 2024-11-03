@@ -29,3 +29,26 @@ export interface AlbumDetailProps {
   nb_tracks: string;
   release_date: string;
 }
+
+// AlbumSinglesコンポーネントのprops
+export interface AlbumSinglesProps {
+  id: number;
+  title: string;
+  preview: string;
+}
+
+// AlbumSingleSongコンポーネントのprops
+export interface AlbumSingleSongProps {
+  id: number;
+  title: string;
+  preview: string;
+  num: number;
+}
+
+// AlbumSingleSongAudioコンポーネントのprops
+export interface AlbumSingleSongAudioProps {
+  preview: string;
+  handlePlay: () => void;
+  handlePause: () => void;
+  isPlaying: boolean;
+}

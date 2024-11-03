@@ -18,7 +18,7 @@ const AlbumAudioContext = createContext<AudioContextType | null>(null);
 export const AlbumAudioProvider = ({ children }: { children: ReactNode }) => {
   // 再生中のidをuseStateで管理
   const [currentlyPlayingId, setCurrentlyPlayingId] = useState<number | null>(
-    null
+    null,
   );
   // Providerのvalueプロパティに共有したい値を設定する
   // childrenをProviderでラップするために、以下のような記述が必要
@@ -38,7 +38,7 @@ export const useAlbumAudio = () => {
   const context = useContext(AlbumAudioContext);
   if (context === null) {
     throw new Error(
-      "useAlbumAudioはAlbumAudioプロバイダーの中で使用する必要があります"
+      "useAlbumAudioはAlbumAudioプロバイダーの中で使用する必要があります",
     );
   }
   return context;

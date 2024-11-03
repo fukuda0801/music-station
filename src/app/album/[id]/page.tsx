@@ -1,11 +1,11 @@
-import { getAlbumDetail, getArtistSongs } from "@/utils/api";
-import styles from "./page.module.scss";
-import { MusicParams } from "@/types/deezerType";
-import Title from "@/components/Music/Title/Title";
-import ArtistLink from "@/components/Music/ArtistLink/ArtistLink";
-import SongList from "@/components/Music/SongList/SongList";
 import AlbumDetail from "@/components/Music/AlbumDetail/AlbumDetail";
 import AlbumSingles from "@/components/Music/AlbumSingles/AlbumSingles";
+import ArtistLink from "@/components/Music/ArtistLink/ArtistLink";
+import SongList from "@/components/Music/SongList/SongList";
+import Title from "@/components/Music/Title/Title";
+import type { MusicParams } from "@/types/deezerType";
+import { getAlbumDetail, getArtistSongs } from "@/utils/api";
+import styles from "./page.module.scss";
 
 const AlbumPage = async ({ params }: MusicParams) => {
   const id = params?.id;

@@ -1,6 +1,6 @@
-import { MusicParams } from "@/types/deezerType";
+import type { AlbumSingles, MusicParams } from "@/types/deezerType";
 import axios from "axios";
-import { NextResponse, type NextRequest } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 const deezerUrl = process.env.DEEZER_URL;
 
@@ -28,14 +28,16 @@ export const GET = async (_request: NextRequest, { params }: MusicParams) => {
       },
     };
 
-    const albumSinglesResult = album.data.tracks.data.map((song: any) => {
-      return {
-        id: song.id,
-        title: song.title,
-        preview: song.preview,
-        image: song.album.cover_big,
-      };
-    });
+    const albumSinglesResult = album.data.tracks.data.map(
+      (song: AlbumSingles) => {
+        return {
+          id: song.id,
+          title: song.title,
+          preview: song.preview,
+          image: song.album.cover_big,
+        };
+      },
+    );
 
     const result = {
       albumResult,

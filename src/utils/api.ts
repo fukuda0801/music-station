@@ -74,3 +74,15 @@ export const getArtistSongs = async (artist: number, limit: number) => {
     handleError(error);
   }
 };
+
+// アルバムの詳細情報を取得する関数(idにはアルバムidを使用してください。)
+export const getAlbumDetail = async (id: number) => {
+  try {
+    const result = await axios.get(
+      `http://localhost:3000/api/music/get_album_detail/${id}`,
+    );
+    return result.data.result;
+  } catch (error) {
+    handleError(error);
+  }
+};

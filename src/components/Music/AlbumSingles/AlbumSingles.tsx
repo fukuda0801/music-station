@@ -1,15 +1,16 @@
 "use client";
 
 import { AlbumAudioProvider } from "@/context/AlbumAudioContext";
-import styles from "./AlbumSingles.module.scss";
+import type { AlbumSinglesProps } from "@/types/musicType";
 import AlbumSingleSong from "../AlbumSingleSong/AlbumSingleSong";
+import styles from "./AlbumSingles.module.scss";
 
 // アルバム収録楽曲を表示するコンポーネント
-const AlbumSingles = ({ singles }: any) => {
+const AlbumSingles = ({ singles }: { singles: AlbumSinglesProps[] }) => {
   return (
     <AlbumAudioProvider>
       <div>
-        {singles.map((song: any, index: number) => {
+        {singles.map((song: AlbumSinglesProps, index: number) => {
           return (
             <div key={song.id}>
               <AlbumSingleSong

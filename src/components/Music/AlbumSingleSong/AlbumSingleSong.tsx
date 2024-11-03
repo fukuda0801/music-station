@@ -1,13 +1,14 @@
 "use client";
 
+import { useAlbumAudio } from "@/context/AlbumAudioContext";
+import type { AlbumSingleSongProps } from "@/types/musicType";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Link from "next/link";
-import styles from "./AlbumSingleSong.module.scss";
-import { useAlbumAudio } from "@/context/AlbumAudioContext";
 import AlbumSingleSongAudio from "../AlbumSingleSongAudio/AlbumSingleSongAudio";
+import styles from "./AlbumSingleSong.module.scss";
 
 // アルバム収録楽曲1曲分のコンポーネント
-const AlbumSingleSong = ({ id, title, preview, num }: any) => {
+const AlbumSingleSong = ({ id, title, preview, num }: AlbumSingleSongProps) => {
   // コンテキストからstateを呼び出す
   const { currentlyPlayingId, setCurrentlyPlayingId } = useAlbumAudio();
 
