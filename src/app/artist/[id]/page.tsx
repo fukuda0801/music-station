@@ -1,9 +1,10 @@
-import Title from "@/components/Music/Title/Title";
-import styles from "./page.module.scss";
-import { getArtistAlbums, getArtistDetail, getArtistSongs } from "@/utils/api";
-import { MusicParams } from "@/types/deezerType";
-import SongList from "@/components/Music/SongList/SongList";
 import ArtistDetail from "@/components/Music/ArtistDetail/ArtistDetail";
+import SongList from "@/components/Music/SongList/SongList";
+import Title from "@/components/Music/Title/Title";
+import type { MusicParams } from "@/types/deezerType";
+import type { ArtistAlbumDetail } from "@/types/musicType";
+import { getArtistAlbums, getArtistDetail, getArtistSongs } from "@/utils/api";
+import styles from "./page.module.scss";
 
 const ArtistPage = async ({ params }: MusicParams) => {
   const id = params.id;
@@ -13,7 +14,7 @@ const ArtistPage = async ({ params }: MusicParams) => {
   const artistSingle = await getArtistSongs(Number(artist.id), 4);
   // アーティストのアルバムを取得
   const artistAlbums = await getArtistAlbums(Number(artist.id), 4);
-  const artistAlbumsResult = artistAlbums.map((album: any) => {
+  const artistAlbumsResult = artistAlbums.map((album: ArtistAlbumDetail) => {
     return {
       id: album.id,
       title: album.title,
