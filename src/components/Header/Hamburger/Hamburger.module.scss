@@ -1,0 +1,80 @@
+@import "/src//app//styles/variables.scss";
+
+.hamburger {
+  position: relative;
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 20;
+
+    & > span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 2px;
+      background-color: $font-main-color;
+      transition: 0.4s;
+    }
+
+    &.open > span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    &.open > span:nth-child(2) {
+      opacity: 0;
+    }
+    &.open > span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 200px;
+    background-color: $font-secondary-color;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: right 0.4s ease;
+    z-index: 10;
+
+    &.open {
+      right: 0;
+    }
+
+    &.close {
+      right: -100%;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+
+      li {
+        padding: 20px;
+        font-size: 0.8rem;
+        color: $font-main-color;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(210, 210, 210, 0.226);
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}

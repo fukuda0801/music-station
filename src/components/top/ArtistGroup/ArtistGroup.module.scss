@@ -1,0 +1,30 @@
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  justify-items: center;
+
+  & > a:nth-child(1) > img {
+    border: 5px solid gold;
+  }
+
+  & > a:nth-child(2) > img {
+    border: 5px solid silver;
+  }
+
+  & > a:nth-child(3) > img {
+    border: 5px solid rgba(218, 58, 58);
+  }
+
+  & > a:nth-child(1) > p:first-child {
+    color: gold;
+  }
+
+  & > a:nth-child(2) > p:first-child {
+    color: silver;
+  }
+
+  & > a:nth-child(3) > p:first-child {
+    color: rgba(218, 58, 58);
+  }
+}

@@ -1,0 +1,14 @@
+@import "/src//app//styles/variables.scss";
+
+.navigationLink {
+  color: white;
+  font-weight: 700;
+
+  a {
+    color: $primary-color;
+
+    &:hover {
+      color: $hover-primary-color;
+    }
+  }
+}

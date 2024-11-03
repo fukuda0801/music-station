@@ -1,0 +1,30 @@
+@import "/src//app//styles/variables.scss";
+
+.loginFormContent {
+  background-color: $back-color;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.buttonGroup {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    display: block;
+    width: 100%;
+  }
+
+  button {
+    margin-bottom: 1rem;
+  }
+}
+
+.naviContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
