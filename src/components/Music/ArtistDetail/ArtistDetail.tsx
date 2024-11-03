@@ -1,8 +1,9 @@
-import Image from "next/image";
+import type { ArtistDetailProps } from "@/types/musicType";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import Image from "next/image";
 import styles from "./ArtistDetail.module.scss";
 
-const ArtistDetail = ({ artist }: any) => {
+const ArtistDetail = ({ artist }: { artist: ArtistDetailProps }) => {
   return (
     <div className={styles.content__artist}>
       <Image

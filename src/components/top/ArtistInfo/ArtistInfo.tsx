@@ -14,7 +14,7 @@ const ArtistInfo = ({
   num: number;
 }) => {
   return (
-    <Link href="/" className={styles.content}>
+    <Link href={`/artist/${id}`} className={styles.content}>
       <p className={styles.content_item}>Rank&nbsp;{num}</p>
       <Image
         src={image}

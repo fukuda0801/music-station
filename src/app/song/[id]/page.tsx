@@ -36,7 +36,7 @@ const SongPage = async ({ params }: MusicParams) => {
 
       <div className={styles.content__unit}>
         <Title title="おすすめ楽曲" />
-        <SongList songs={artistSongs} />
+        <SongList songs={artistSongs} link="song" />
       </div>
     </div>
   );
