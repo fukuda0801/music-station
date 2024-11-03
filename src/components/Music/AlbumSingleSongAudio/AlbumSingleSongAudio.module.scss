@@ -1,0 +1,13 @@
+@import "/src/app/styles/variables.scss";
+
+.content__active {
+  font-size: 2.2rem;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.content__nonactive {
+  font-size: 2.2rem;
+  color: $secondary-color;
+  cursor: pointer;
+}

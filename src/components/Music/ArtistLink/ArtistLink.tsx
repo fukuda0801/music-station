@@ -8,7 +8,7 @@ import styles from "./ArtistLink.module.scss";
 const ArtistLink = ({ id, image, artist }: ArtistLinkProps) => {
   return (
     <>
-      <Link href="/" className={styles.content__link_artist}>
+      <Link href={`/artist/${id}`} className={styles.content__link_artist}>
         <Image
           src={image}
           alt={`${artist}-${id}の画像`}

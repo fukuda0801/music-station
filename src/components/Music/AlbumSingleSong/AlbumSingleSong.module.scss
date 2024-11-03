@@ -1,0 +1,31 @@
+@import "/src/app/styles/variables.scss";
+
+.content__single {
+  display: flex;
+  padding: 0.3rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $secondary-color;
+
+  &:hover {
+    background-color: $hover-back-color;
+  }
+
+  &_detail {
+    margin-left: 1rem;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > button {
+      color: $primary-color;
+      border-radius: 10px;
+      border: $primary-color solid 1px;
+      padding: 0.2rem 0.4rem 0;
+      box-shadow: none;
+      background-color: $back-color;
+      cursor: pointer;
+    }
+  }
+}

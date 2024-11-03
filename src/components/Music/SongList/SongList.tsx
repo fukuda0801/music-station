@@ -5,14 +5,20 @@ import Link from "next/link";
 import styles from "./SongList.module.scss";
 
 // 楽曲情報リストのコンポーネント
-const SongList = ({ songs }: { songs: SongListProps[] }) => {
+const SongList = ({
+  songs,
+  link,
+}: {
+  songs: SongListProps[];
+  link: string;
+}) => {
   return (
     <div className={styles.content__list}>
       {songs.map((song: SongListProps) => {
         return (
           <Link
             key={song.id}
-            href={`/song/${song.id}`}
+            href={`/${link}/${song.id}`}
             className={styles.content__list_song}
           >
             <Image

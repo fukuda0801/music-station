@@ -74,3 +74,39 @@ export const getArtistSongs = async (artist: number, limit: number) => {
     handleError(error);
   }
 };
+
+// アルバムの詳細情報を取得する関数(idにはアルバムidを使用してください。)
+export const getAlbumDetail = async (id: number) => {
+  try {
+    const result = await axios.get(
+      `http://localhost:3000/api/music/get_album_detail/${id}`,
+    );
+    return result.data.result;
+  } catch (error) {
+    handleError(error);
+  }
+};
+
+// アーティスト詳細情報を取得する関数(idにはアーティストidを使用してください)
+export const getArtistDetail = async (id: number) => {
+  try {
+    const result = await axios.get(
+      `http://localhost:3000/api/music/get_artist_detail/${id}`,
+    );
+    return result.data.result;
+  } catch (error) {
+    handleError(error);
+  }
+};
+
+// アーティストのアルバム情報を取得する関数(idにはアーティストidを、limitには取得件数を使用してください)
+export const getArtistAlbums = async (id: number, limit: number) => {
+  try {
+    const result = await axios.get(
+      `http://localhost:3000/api/music/get_artist_albums?artist=${id}&limit=${limit}`,
+    );
+    return result.data.result;
+  } catch (error) {
+    handleError(error);
+  }
+};
