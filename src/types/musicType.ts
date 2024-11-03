@@ -21,3 +21,11 @@ export interface SongListProps {
   image: string;
   artist: string;
 }
+
+// AlbumDetailコンポーネントのprops
+export interface AlbumDetailProps {
+  title: string;
+  image: string;
+  nb_tracks: string;
+  release_date: string;
+}
