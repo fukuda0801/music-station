@@ -8,10 +8,12 @@
 
   &_active {
     color: $primary-color;
+    font-size: 2.2rem;
     cursor: pointer;
   }
 
   &_inactive {
+    font-size: 2.2rem;
     color: $secondary-color;
   }
 
