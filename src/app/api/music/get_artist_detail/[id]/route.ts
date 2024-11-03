@@ -1,6 +1,6 @@
-import { MusicParams } from "@/types/deezerType";
+import type { MusicParams } from "@/types/deezerType";
 import axios from "axios";
-import { NextResponse, type NextRequest } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 const deezerUrl = process.env.DEEZER_URL;
 
@@ -27,7 +27,7 @@ export const GET = async (_request: NextRequest, { params }: MusicParams) => {
     console.error(error);
     return NextResponse.json(
       { message: "サーバーエラーが発生しました" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 };

@@ -52,3 +52,18 @@ export interface AlbumSingleSongAudioProps {
   handlePause: () => void;
   isPlaying: boolean;
 }
+
+// アーティスト詳細ページの処理で使用する型
+export interface ArtistAlbumDetail {
+  id: number;
+  title: string;
+  image: string;
+}
+
+// ArtistDetailコンポーネントのprops
+export interface ArtistDetailProps {
+  id: number;
+  name: string;
+  image: string;
+  artist: string;
+}

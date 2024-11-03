@@ -1,5 +1,6 @@
+import type { ArtistAlbums } from "@/types/deezerType";
 import axios from "axios";
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 const deezerUrl = process.env.DEEZER_URL;
 
@@ -10,17 +11,17 @@ export const GET = async (request: NextRequest) => {
     const artist = searchParams.get("artist");
 
     const albums = await axios.get(
-      `${deezerUrl}/artist/${artist}/albums?limit=${limit}`
+      `${deezerUrl}/artist/${artist}/albums?limit=${limit}`,
     );
 
     if (!albums) {
       return NextResponse.json(
         { message: "アルバム情報を取得できませんでした" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
-    const result = albums.data.data.map((album: any) => {
+    const result = albums.data.data.map((album: ArtistAlbums) => {
       return {
         id: album.id,
         title: album.title,
@@ -33,7 +34,7 @@ export const GET = async (request: NextRequest) => {
     console.error(error);
     return NextResponse.json(
       { message: "サーバーエラーです" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 };
