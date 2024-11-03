@@ -1,0 +1,36 @@
+@import "/src/app/styles/variables.scss";
+
+.content__artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+
+  & > img {
+    border-radius: 50%;
+    width: 40%;
+    height: auto;
+  }
+
+  & > p {
+    font-weight: bold;
+  }
+
+  & > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0.2rem 0.4rem;
+    border: none;
+    background-color: $primary-color;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: white;
+      color: $primary-color;
+    }
+  }
+}
